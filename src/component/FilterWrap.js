@@ -1,9 +1,10 @@
 import React from 'react';
-import './../css/FilterWrap.scss'
+import './../scss/FilterWrap.scss'
 
 function FilterWrap (props) {
     const {
         tags,
+        currentTag,
         getBookList
     } = props;
     return (
@@ -17,7 +18,7 @@ function FilterWrap (props) {
                 {
                     tags.map(tag => {
                         return (
-                            <li key={ tag.id } onClick={ () => getBookList(tag.id) }>{ tag.name }</li>
+                            <li className={ currentTag === tag.id ? "active" : '' } key={ tag.id } onClick={ () => getBookList(tag.id) }>{ tag.name }</li>
                         )
                     })
                 }

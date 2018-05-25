@@ -30,7 +30,7 @@ export default class Counter extends Component {
     }
 
     componentDidUpdate = (prevProps, prevState) => {
-        this.refs['countBtn'].disabled = this.state.count > 4
+        // this.refs['countBtn'].disabled = this.state.count > 4
         console.log('Component DID UPDATE!')
     }
 

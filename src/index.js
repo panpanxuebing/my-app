@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types'
+import App from './App';
 
 ReactDOM.render(
-    <div>Hello World!</div>,
+    <App />,
     document.getElementById('root')
-);
+); 
